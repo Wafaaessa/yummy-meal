@@ -13,6 +13,7 @@ userpasswordAlert,
 userRepasswordAlert;
 isTrue = !0,
 cont = [];
+
     // //////////////////home page///////////
     search("").then(() => {
         $("#load .spinner").fadeOut(100,function(){
@@ -187,7 +188,7 @@ function displayCategory(){
 function displayArea() {
     let cart2=``;
         for (let i = 0; i < cont.length; i++) {
-            cart2+=`<div class="col-md-6 col-lg-3 my-3   shadow">
+            cart2+=`<div class="col-md-6 col-lg-3 my-3  text-center shadow">
             <div class="img-container shadow rounded ">
                 <div id="area-click" onclick="(filterArea('${cont[i].strArea}'))" class="box-img ">
                     <i class="fa-solid fa-city fa-3x"></i>
@@ -203,7 +204,7 @@ function displayArea() {
     function displayIngredients() {
         let cart3=``
         for (let i = 0; i < cont.length; i++) {
-        cart3+=`    <div class="col-md-6 col-lg-3 my-3  shadow">
+        cart3+=`    <div class="col-md-6 col-lg-3 my-3 text-center shadow">
         <div id ="ingredients-click" onclick="filterIngredient('${cont[i].strIngredient}')" class="box-img ">
       <div class="img-container">
         <i class="fa-solid fa-bowl-food fa-3x"></i>
@@ -349,6 +350,7 @@ if (listBy == "contact") {
         </div>
 
         <button type="submit" disabled id="submitBtn" class="btn btn-outline-danger mt-3 ">Submit</button>
+    
     </div>
 
 </section>`
